@@ -1,0 +1,20 @@
+Pseudocode
+Create three classes for a rectangle, triangle, and trapezoid
+User Input:
+  Print instructions out to user
+  Allow user to pick which shape they want calculations for
+  Gather user input for each variable needed
+  Length and width for rectangle
+  Length, width, diagonal 1 and diagonal 2 for triangle
+  Length, width 1, width 2, diagonal 1, diagonal 2 for trapezoid
+Rectangle
+  Calculate area with formula (length*width)
+  Calculate perimeter with formula (2* length + 2*width)
+Triangle
+  Calculate area with formula ((length*width) / 2)
+  Calculate perimeter with formula (width+diagonal 1+ diagonal 2)
+Trapezoid
+  Calculate area with formula ((width 1 + width 2) / 2 * length)
+  Calculate perimeter with formula (width 1 + width 2 + diagonal 1 + diagonal 2)
+Main method
+  Follow the general algorithm
