@@ -1,0 +1,15 @@
+Create an object for each shape (rectangle, triangle, trapezoid)
+Determine which shapes the user what’s to perform calculations on
+Gather user input for:
+  The length, width for rectangle
+  The length, diagonals, and height for triangle
+  The first and second length, the two diagonals, and the height for trapezoid
+Perform calculations for the:
+Area
+  Use area formula for rectangle
+  Override for triangle and override again for trapezoid
+Perimeter
+  Use perimeter formula for rectangle
+  Override for triangle and override for trapezoid
+Display the equation used
+Display results of the calculations
