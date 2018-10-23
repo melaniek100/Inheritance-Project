@@ -1,0 +1,21 @@
+//first draft created October 21
+package shapes;
+
+public class Shapes {
+//declares class variables    
+double length;
+double width; 
+//new constructor
+public Shapes (double l, double w) {
+    this.length= l;
+    this.width= w;
+}
+//method to find area of rectangle
+public double area() {
+    double area= length*width;
+    return area;
+}
+    public static void main(String[] args) {
+    }
+    
+}
