@@ -1,21 +1,44 @@
-//first draft created October 21
 package shapes;
-
+//Second draft October 22, 2018
+import java.util.Scanner;
 public class Shapes {
-//declares class variables    
+
 double length;
 double width; 
-//new constructor
+
 public Shapes (double l, double w) {
-    this.length= l;
-    this.width= w;
+    this.length= 0;
+    this.width= 0;
 }
-//method to find area of rectangle
+//Method to allow for user input
+public double getValue () {
+    Scanner input = new Scanner(System.in);
+    double num;
+//Error handler for numbers below 0    
+    while (true) {
+        System.out.print("Enter a number above 0: ");
+        num= input.nextDouble();
+        if (num>0){
+            break;
+        }
+        else {
+            System.out.println ("Invalid entry!");
+        }
+    }
+    return num;
+}
+//Method to find area of rectangle
 public double area() {
     double area= length*width;
     return area;
 }
+//Method to find perimeter of rectangle
+public double perimeter() {
+    double peri= 2*length+2*width;
+    return peri;
+}
     public static void main(String[] args) {
+        
     }
     
 }
