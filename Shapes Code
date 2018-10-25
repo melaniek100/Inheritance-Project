@@ -7,11 +7,6 @@ public class Shapes {
 double length;
 double width; 
 
-public Shapes () {
-    this.length= 0;
-    this.width= 0;
-}
-
 //Method to allow for user input
 
 public double getValue (String instruction) {
@@ -32,7 +27,7 @@ public double getValue (String instruction) {
 }
 
 public void input() {
-    System.out.println ("Enter a numeric value for the length and width.");
+    System.out.println ("Enter a numeric value for the following values.");
     System.out.println ("The number needs to be above ZERO!");
     this.length=getValue("Length: ");
     this.width=getValue("Width: ");
@@ -53,11 +48,21 @@ public void result() {
     System.out.println ("The area of the rectangle is "+area());
     System.out.println("The perimeter of the rectangle is "+perimeter());
 }
-//Initiall the statements here are to test the methods
     public static void main(String[] args) {
+        
         Shapes rec= new Shapes();
         rec.input();
         rec.result();
+        
+        Triangle triangle=new Triangle();
+        triangle.input();
+        triangle.result();
+        
+        Trapezoid trapezoid= new Trapezoid();
+        trapezoid.input();
+        trapezoid.result();
     }
+    
+}
     
 }
