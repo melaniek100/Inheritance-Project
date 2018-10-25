@@ -1,1 +1,35 @@
 
+package shapes;
+
+public class Triangle extends Shapes {
+    
+    double diagonal1;
+    double diagonal2;
+    
+    @Override
+    public void input() {
+        System.out.println ("Enter a numeric value for the length and width.");
+        System.out.println ("The number needs to be above ZERO!");
+        this.length=getValue("Length: ");
+        this.width=getValue("Width: ");
+        this.diagonal1=getValue("First diagonal: ");
+        this.diagonal2=getValue("Second diagonal: ");
+    }
+    
+    @Override
+    public double area() {
+        double area= (length*width)/2;
+        return area;
+    }
+    
+    @Override
+    public double perimeter() {
+        double peri= width+diagonal1+diagonal2;
+        return peri;
+    }
+    @Override
+    public void result() {
+        System.out.println ("The area of the rectangle is "+area());
+        System.out.println("The perimeter of the rectangle is "+perimeter());
+    }
+}
