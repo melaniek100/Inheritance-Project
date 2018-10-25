@@ -1,6 +1,6 @@
 package shapes;
-
-//Third draft on October 23, 2018 (7:00pm)
+//Document error in last update, fourth draft on October 24, 2018 (8:30PM)
+//Fifth draft on October 25, 2018 (12:40)
 import java.util.Scanner;
 public class Shapes {
 
@@ -8,7 +8,6 @@ double length;
 double width; 
 
 //Method to allow for user input
-
 public double getValue (String instruction) {
     Scanner input = new Scanner(System.in);
     double num; 
@@ -25,9 +24,41 @@ public double getValue (String instruction) {
     }
     return num;
 }
+public String choose () {
+        Scanner input= new Scanner (System.in);
+        System.out.print("Choose your shape by typing the ");
+        System.out.println ("corresponding letter.");
+        System.out.println("a. Rectangle \t b. Triangle \t c. Trapezoid");
+        String shape=input.next();
+        return shape;
+    }
 
+public void selection() {
+    switch (choose()) {
+        case "a":
+            Shapes rec= new Shapes();
+            rec.input();
+            rec.result();
+            break;
+        case "b":
+            Triangle triangle=new Triangle();
+            triangle.input();
+            triangle.result();
+            break;
+        case "c": 
+            Trapezoid trapezoid= new Trapezoid();
+            trapezoid.input();
+            trapezoid.result(); 
+            break;
+        default:
+            System.out.println("Invalid input!");
+            break;
+    }
+}
+    
+//method that assigns a value to the variables necessary for this object
 public void input() {
-    System.out.println ("Enter a numeric value for the following values.");
+    System.out.println ("Enter a numeric value for a RECTANGLE.");
     System.out.println ("The number needs to be above ZERO!");
     this.length=getValue("Length: ");
     this.width=getValue("Width: ");
@@ -45,24 +76,28 @@ public double perimeter() {
 }
 //Method that displays the calculation to the user
 public void result() {
+    System.out.println ("Rectangle Measurements");
     System.out.println ("The area of the rectangle is "+area());
     System.out.println("The perimeter of the rectangle is "+perimeter());
 }
     public static void main(String[] args) {
         
         Shapes rec= new Shapes();
-        rec.input();
-        rec.result();
+        //rec.input();
+        //rec.result();
         
         Triangle triangle=new Triangle();
-        triangle.input();
-        triangle.result();
+        //triangle.input();
+        //triangle.result();
         
         Trapezoid trapezoid= new Trapezoid();
-        trapezoid.input();
-        trapezoid.result();
+        //trapezoid.input();
+        //trapezoid.result(); */
+        rec.selection();
     }
     
 }
+/*Potential error may arise from exporting code between computers, initial fix
+was to enclose code in a comment and then uncomment it, actual syntax should be
+fine */
     
-}
