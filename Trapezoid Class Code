@@ -1,0 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package shapes;
+
+public class Trapezoid extends Shapes {
+    double diagonal1;
+    double diagonal2;
+    double width2;
+    
+    @Override
+    public void input() {
+        System.out.println ("Enter a numeric value for the following values.");
+        System.out.println ("The number needs to be above ZERO!");
+        this.length= getValue("Length: ");
+        this.width= getValue("Width: ");
+        this.width= getValue("Second width: ");
+        this.diagonal1= getValue("First diagonal: ");
+        this.diagonal2= getValue("Second diagonal: ");
+    }
+    
+    @Override
+    public double area() {
+    double area= ((width+width2)/2)*length;
+    return area;
+}
+    @Override
+    public double perimeter() {
+        double peri= width+width2+diagonal1+diagonal2;
+        return peri;
+    }
+
+    @Override
+    public void result() {
+        System.out.println ("The area of the rectangle is "+area());
+        System.out.println("The perimeter of the rectangle is "+perimeter());
+}
+}
