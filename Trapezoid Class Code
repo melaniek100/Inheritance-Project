@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package shapes;
 
 public class Trapezoid extends Shapes {
@@ -12,7 +7,7 @@ public class Trapezoid extends Shapes {
     
     @Override
     public void input() {
-        System.out.println ("Enter a numeric value for the following values.");
+        System.out.println ("Enter a numeric value for a TRAPEZOID.");
         System.out.println ("The number needs to be above ZERO!");
         this.length= getValue("Length: ");
         this.width= getValue("Width: ");
@@ -34,7 +29,8 @@ public class Trapezoid extends Shapes {
 
     @Override
     public void result() {
-        System.out.println ("The area of the rectangle is "+area());
-        System.out.println("The perimeter of the rectangle is "+perimeter());
-}
+        System.out.println("Trapezoid Measurements");
+        System.out.println ("The area of the trapezoid is "+area());
+        System.out.println("The perimeter of the trapezoid is "+perimeter());
+    }
 }
