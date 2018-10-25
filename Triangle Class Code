@@ -1,4 +1,3 @@
-
 package shapes;
 
 public class Triangle extends Shapes {
@@ -8,7 +7,7 @@ public class Triangle extends Shapes {
     
     @Override
     public void input() {
-        System.out.println ("Enter a numeric value for the length and width.");
+        System.out.println ("Enter a numeric value for a TRIANGLE.");
         System.out.println ("The number needs to be above ZERO!");
         this.length=getValue("Length: ");
         this.width=getValue("Width: ");
@@ -29,7 +28,8 @@ public class Triangle extends Shapes {
     }
     @Override
     public void result() {
-        System.out.println ("The area of the rectangle is "+area());
-        System.out.println("The perimeter of the rectangle is "+perimeter());
+        System.out.println("Triangle Measurements");
+        System.out.println ("The area of the triangle is "+area());
+        System.out.println("The perimeter of the triangle is "+perimeter());
     }
 }
