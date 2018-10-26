@@ -1,10 +1,12 @@
 package shapes;
 
+//Subclass of the main Shapes class
 public class Triangle extends Shapes {
     
     double diagonal1;
     double diagonal2;
-    
+
+//all override functions will be carried out when the triangle object is called
     @Override
     public void input() {
         System.out.println ("Enter a numeric value for a TRIANGLE.");
@@ -28,6 +30,7 @@ public class Triangle extends Shapes {
     }
     @Override
     public void result() {
+        System.out.println("");
         System.out.println("Triangle Measurements");
         System.out.println ("The area of the triangle is "+area());
         System.out.println("The perimeter of the triangle is "+perimeter());
