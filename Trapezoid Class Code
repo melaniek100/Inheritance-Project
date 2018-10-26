@@ -1,17 +1,19 @@
+
 package shapes;
 
+//Subclass of the main Shapes class
 public class Trapezoid extends Shapes {
     double diagonal1;
     double diagonal2;
     double width2;
-    
+//all override functions will be carried out when the triangle object is called
     @Override
     public void input() {
         System.out.println ("Enter a numeric value for a TRAPEZOID.");
         System.out.println ("The number needs to be above ZERO!");
         this.length= getValue("Length: ");
         this.width= getValue("Width: ");
-        this.width= getValue("Second width: ");
+        this.width2= getValue("Second width: ");
         this.diagonal1= getValue("First diagonal: ");
         this.diagonal2= getValue("Second diagonal: ");
     }
@@ -29,6 +31,7 @@ public class Trapezoid extends Shapes {
 
     @Override
     public void result() {
+        System.out.println("");
         System.out.println("Trapezoid Measurements");
         System.out.println ("The area of the trapezoid is "+area());
         System.out.println("The perimeter of the trapezoid is "+perimeter());
