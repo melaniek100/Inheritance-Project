@@ -1,6 +1,6 @@
 package shapes;
 //Document error in last update, fourth draft on October 24, 2018 (8:30PM)
-//Fifth draft on October 25, 2018 (12:40)
+//Sixth draft on October 26, 2018 (2:34)
 import java.util.Scanner;
 public class Shapes {
 
@@ -11,7 +11,8 @@ double width;
 public double getValue (String instruction) {
     Scanner input = new Scanner(System.in);
     double num; 
-//Error handler for numbers below 0    
+    
+//Error handler for numbers below 0 and is where the numbers are entered
     while (true) {
         System.out.print(instruction);
         num= input.nextDouble();
@@ -24,6 +25,8 @@ public double getValue (String instruction) {
     }
     return num;
 }
+
+//User will enter a letter that corresponds to one of the oobjects
 public String choose () {
         Scanner input= new Scanner (System.in);
         System.out.print("Choose your shape by typing the ");
@@ -33,6 +36,8 @@ public String choose () {
         return shape;
     }
 
+//contains all the objects so depending on what's called it will be carried out
+//different objects will inherit parent attributes and override various  methods
 public void selection() {
     switch (choose()) {
         case "a":
@@ -79,20 +84,12 @@ public void result() {
     System.out.println ("Rectangle Measurements");
     System.out.println ("The area of the rectangle is "+area());
     System.out.println("The perimeter of the rectangle is "+perimeter());
+    System.out.println("");
 }
-    public static void main(String[] args) {
-        
+
+//Main method calls the selection method to run the program
+    public static void main(String[] args) {      
         Shapes rec= new Shapes();
-        //rec.input();
-        //rec.result();
-        
-        Triangle triangle=new Triangle();
-        //triangle.input();
-        //triangle.result();
-        
-        Trapezoid trapezoid= new Trapezoid();
-        //trapezoid.input();
-        //trapezoid.result(); */
         rec.selection();
     }
     
